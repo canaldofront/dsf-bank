@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.62.4",
+    "@react-three/fiber": "^8.12.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.10.0",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "three": "^0.151.3"
+  },
+  "devDependencies": {
+    "sass": "^1.60.0"
   }
 }

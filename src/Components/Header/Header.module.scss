@@ -1,0 +1,45 @@
+@import '@/styles/mixins.scss';
+
+.header {
+  .conteiner {
+    @include max-width;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60rem;
+    align-items: center;
+
+    @include device(tablet) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+      height: 80rem;
+      margin-top: 10rem;
+    }
+
+    & > div:last-of-type {
+      height: 100%;
+    }
+
+    .content {
+      max-width: 56rem;
+
+      span {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        @include gradient-color;
+        font-size: 6.4rem;
+        font-weight: 500;
+        margin: 1rem 0 2rem 0;
+        max-width: 50rem;
+
+        @include device(tablet) {
+          margin: 1rem auto 2rem auto;
+        }
+      }
+    }
+  }
+}

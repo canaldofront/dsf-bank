@@ -1,0 +1,67 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: $fontFamily;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include device(tablet) {
+    font-size: 60%;
+  }
+
+  @include device(mobile) {
+    font-size: 58%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $black;
+  color: $white;
+}
+
+section {
+  scroll-margin-top: 10rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+.p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+
+  &.light {
+    opacity: 0.6;
+  }
+}
+
+.title {
+  @include gradient-color;
+  display: inline-block;
+  font-size: 4.8rem;
+  font-weight: 500;
+
+  @include device(tablet) {
+    text-align: center;
+  }
+
+  @include device(mobile) {
+    font-size: 4rem;
+  }
+}

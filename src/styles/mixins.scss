@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+@mixin max-width {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-bottom: 16rem;
+  padding: 0 2rem;
+}
+
+@mixin gradient-color() {
+  background: linear-gradient(120deg, $white 20%, $black 140%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin radial-blue-esphere {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(135, 235, 207, 0.15) 0%,
+    rgba(89, 158, 219, 0.15) 52.6%,
+    rgba(123, 104, 238, 0.15) 100%
+  );
+  filter: blur(7rem);
+  -webkit-filter: blur(7rem);
+}
+
+@mixin radial-orange-esphere {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(135, 235, 207, 0.15) 0%,
+    rgba(254, 225, 43, 0.15) 0.01%,
+    rgba(255, 182, 193, 0.15) 52.6%,
+    rgba(255, 160, 122, 0.15) 100%
+  );
+  filter: blur(7rem);
+  -webkit-filter: blur(7rem);
+}
+
+@mixin device($device) {
+  @if $device == 'desktop' {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $device == 'notebook' {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $device == 'tablet' {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $device == 'mobile' {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+}

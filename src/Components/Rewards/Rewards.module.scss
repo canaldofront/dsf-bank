@@ -1,0 +1,38 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.rewards {
+  @include max-width;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 52rem;
+
+  @include device(tablet) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100rem;
+    margin-bottom: 8rem;
+  }
+
+  .content {
+    max-width: 56rem;
+
+    @include device(tablet) {
+      text-align: center;
+    }
+
+    .item {
+      &:first-of-type {
+        margin: 6rem 0;
+      }
+
+      p {
+        max-width: 45rem;
+
+        @include device(tablet) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

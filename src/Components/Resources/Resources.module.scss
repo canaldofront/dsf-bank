@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.resources {
+  @include max-width;
+
+  .conteiner {
+    background-color: $lightBlack;
+    padding: 8rem 6rem;
+    text-align: center;
+    border-radius: 2rem;
+
+    @include device(notebook) {
+      padding: 6rem 4rem;
+    }
+
+    p {
+      max-width: 80rem;
+      margin: 2rem auto 8rem auto;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include device(tablet) {
+        grid-template-columns: 1fr;
+        gap: 6rem;
+        justify-items: center;
+      }
+
+      .item {
+        max-width: 32rem;
+
+        svg {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+
+        h3 {
+          margin: 1rem 0;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
